@@ -10,4 +10,8 @@
     <select id="getById" resultType="org.akanami.entity.User">
       select * from t_sys_user where id = #{id}
    </select>
+
+    <update id="updateById" parameterType="org.akanami.entity.User">
+        update t_sys_user set name = #{name} where id = #{id}
+    </update>
 </mapper>

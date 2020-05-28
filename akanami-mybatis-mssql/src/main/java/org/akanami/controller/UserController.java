@@ -17,4 +17,15 @@ public class UserController {
     public User get(@PathVariable("id") Long id) {
         return this.userMapper.getById(id);
     }
+
+    @GetMapping("/user/update/{id}/{name}")
+    public int update(@PathVariable("id") Long id, @PathVariable("name") String name) {
+        User user = new User();
+        user.setId(id);
+        user.setName(name);
+
+        int result = this.userMapper.updateById(user);
+
+        return result;
+    }
 }
