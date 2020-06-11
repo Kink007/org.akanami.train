@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>akanami-mybatis-mssql</module>
+        <module>akanami-shiro</module>
     </modules>
 
     <dependencyManagement>
