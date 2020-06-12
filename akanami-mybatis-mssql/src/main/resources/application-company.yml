@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:sqlserver://10.7.46.123:1433; DatabaseName=xsd
-    username: sa
-    password: 123
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
