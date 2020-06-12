@@ -9,6 +9,15 @@ public enum Color {
         this.name = aName;
     }
 
+    public static String getName(int index) {
+        for (Color c : Color.values()) {
+            if (c.getIndex() == index) {
+                return c.name;
+            }
+        }
+        return null;
+    }
+
     private Integer index;
     private String name;
 

@@ -24,4 +24,10 @@ public class ColorTest {
         Color white = Color.WHITE;
         Assert.assertEquals("白色", white.getName());
     }
+
+    @Test
+    public void s_getName() {
+        Assert.assertEquals("黑色", Color.getName(0));
+        Assert.assertEquals("白色", Color.getName(1));
+    }
 }
