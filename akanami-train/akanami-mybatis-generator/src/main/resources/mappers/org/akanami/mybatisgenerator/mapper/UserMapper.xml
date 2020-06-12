@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.akanami.mybatisgenerator.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="org.akanami.mybatisgenerator.entity.User">
+    <constructor>
+      <idArg column="Id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="LoginName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Name" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Password" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Password2" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Locked" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="LastLoginIP" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="LastLoginTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    Id, LoginName, Name, Password, Password2, Locked, LastLoginIP, LastLoginTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_sys_user
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_sys_user
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.akanami.mybatisgenerator.entity.User">
+    insert into t_sys_user (Id, LoginName, Name, 
+      Password, Password2, Locked, 
+      LastLoginIP, LastLoginTime)
+    values (#{id,jdbcType=INTEGER}, #{loginname,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{password,jdbcType=VARCHAR}, #{password2,jdbcType=VARCHAR}, #{locked,jdbcType=BIT}, 
+      #{lastloginip,jdbcType=VARCHAR}, #{lastlogintime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.akanami.mybatisgenerator.entity.User">
+    insert into t_sys_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        Id,
+      </if>
+      <if test="loginname != null">
+        LoginName,
+      </if>
+      <if test="name != null">
+        Name,
+      </if>
+      <if test="password != null">
+        Password,
+      </if>
+      <if test="password2 != null">
+        Password2,
+      </if>
+      <if test="locked != null">
+        Locked,
+      </if>
+      <if test="lastloginip != null">
+        LastLoginIP,
+      </if>
+      <if test="lastlogintime != null">
+        LastLoginTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="loginname != null">
+        #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="password2 != null">
+        #{password2,jdbcType=VARCHAR},
+      </if>
+      <if test="locked != null">
+        #{locked,jdbcType=BIT},
+      </if>
+      <if test="lastloginip != null">
+        #{lastloginip,jdbcType=VARCHAR},
+      </if>
+      <if test="lastlogintime != null">
+        #{lastlogintime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.akanami.mybatisgenerator.entity.User">
+    update t_sys_user
+    <set>
+      <if test="loginname != null">
+        LoginName = #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        Name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        Password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="password2 != null">
+        Password2 = #{password2,jdbcType=VARCHAR},
+      </if>
+      <if test="locked != null">
+        Locked = #{locked,jdbcType=BIT},
+      </if>
+      <if test="lastloginip != null">
+        LastLoginIP = #{lastloginip,jdbcType=VARCHAR},
+      </if>
+      <if test="lastlogintime != null">
+        LastLoginTime = #{lastlogintime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.akanami.mybatisgenerator.entity.User">
+    update t_sys_user
+    set LoginName = #{loginname,jdbcType=VARCHAR},
+      Name = #{name,jdbcType=VARCHAR},
+      Password = #{password,jdbcType=VARCHAR},
+      Password2 = #{password2,jdbcType=VARCHAR},
+      Locked = #{locked,jdbcType=BIT},
+      LastLoginIP = #{lastloginip,jdbcType=VARCHAR},
+      LastLoginTime = #{lastlogintime,jdbcType=TIMESTAMP}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
