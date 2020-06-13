@@ -12,6 +12,7 @@
         <module>akanami-mybatis-generator</module>
         <module>akanami-springboot-shiro</module>
         <module>akanami-java-base</module>
+        <module>akanami-springboot</module>
     </modules>
 
     <dependencyManagement>

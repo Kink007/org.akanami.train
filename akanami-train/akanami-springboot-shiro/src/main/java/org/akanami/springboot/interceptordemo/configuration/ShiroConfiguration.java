@@ -1,4 +1,4 @@
-package org.akanami.springboot.configuration;
+package org.akanami.springboot.interceptordemo.configuration;
 
 import org.akanami.springboot.shiro.ApplicationRealm;
 import org.akanami.springboot.shiro.JwtFilter;

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="akanami-java-base" />
         <module name="akanami-mybatis-generator" />
+        <module name="akanami-springboot" />
         <module name="akanami-springboot-shiro" />
       </profile>
     </annotationProcessing>
