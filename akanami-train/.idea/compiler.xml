@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="akanami-java-base" />
+        <module name="akanami-modelmapper" />
         <module name="akanami-mybatis-generator" />
         <module name="akanami-springboot" />
         <module name="akanami-springboot-shiro" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
