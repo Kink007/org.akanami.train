@@ -13,4 +13,5 @@ public class SimpleDto {
     private Integer id;
     private String name;
     private Date birth;
+    private String loginname;
 }

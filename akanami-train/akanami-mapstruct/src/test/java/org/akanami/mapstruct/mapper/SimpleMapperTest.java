@@ -1,4 +1,4 @@
-package org.akanami.mapstruct.model.mapper;
+package org.akanami.mapstruct.mapper;
 
 import org.akanami.mapstruct.model.simple.Simple;
 import org.akanami.mapstruct.model.simple.SimpleDto;
@@ -35,5 +35,6 @@ public class SimpleMapperTest {
         Assert.assertEquals(entity.getId(), dto.getId());
         Assert.assertEquals(entity.getName(), dto.getName());
         Assert.assertEquals(entity.getBirth(), dto.getBirth());
+        Assert.assertEquals(entity.getName(), dto.getLoginname());
     }
 }
