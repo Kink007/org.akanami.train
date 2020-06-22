@@ -15,7 +15,8 @@
         <module>akanami-springboot</module>
         <module>akanami-modelmapper</module>
         <module>akanami-mapstruct</module>
-        <module>akanami-hbase-demo</module>
+        <module>akanami-spring-boot-starter</module>
+        <module>akanami-spring-boot-starter-caller</module>
     </modules>
 
     <properties>
@@ -42,6 +43,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-configuration-processor</artifactId>
                 <version>2.2.5.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>2.3.0.RELEASE</version>
             </dependency>
 
             <!-- mybatis 相关 -->

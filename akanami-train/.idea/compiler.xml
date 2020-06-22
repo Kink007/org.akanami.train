@@ -10,6 +10,8 @@
         <module name="akanami-java-base" />
         <module name="akanami-modelmapper" />
         <module name="akanami-mybatis-generator" />
+        <module name="akanami-spring-boot-starter" />
+        <module name="akanami-spring-boot-starter-caller" />
         <module name="akanami-springboot" />
         <module name="akanami-springboot-shiro" />
       </profile>

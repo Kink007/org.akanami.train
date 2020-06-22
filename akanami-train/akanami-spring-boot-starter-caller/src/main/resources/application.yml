@@ -1,0 +1,5 @@
+akanami:
+  starter:
+    code: testcode
+    name: testname
+    use: true
