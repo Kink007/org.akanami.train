@@ -17,6 +17,7 @@
         <module>akanami-mapstruct</module>
         <module>akanami-spring-boot-starter</module>
         <module>akanami-spring-boot-starter-caller</module>
+        <module>akanami-hadoop-remote</module>
     </modules>
 
     <properties>
