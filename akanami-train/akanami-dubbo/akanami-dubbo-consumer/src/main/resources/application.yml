@@ -1,0 +1,10 @@
+dubbo:
+  application:
+    name: akanami-dubbo-consumer
+  registry:
+    address: zookeeper://49.234.38.24:2181
+  scan:
+    base-packages: org.akanami.service
+
+server:
+  port: 8081

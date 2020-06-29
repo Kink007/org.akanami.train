@@ -7,6 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="akanami-dubbo-consumer" />
+        <module name="akanami-dubbo-provider" />
         <module name="akanami-hadoop-remote" />
         <module name="akanami-java-base" />
         <module name="akanami-modelmapper" />
@@ -39,7 +41,9 @@
         <module name="akanami-mapstruct" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="akanami-dubbo" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
